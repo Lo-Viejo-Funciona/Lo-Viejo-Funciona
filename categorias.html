@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Categorías de Problemas</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Selecciona tu problema</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="categorias.html">Categorías</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section>
+      <h2>¿Qué problema tienes?</h2>
+      <form id="form-categorias">
+        <label for="categoria">Elige una categoría:</label>
+        <select id="categoria" name="categoria">
+          <option value="">-- Selecciona --</option>
+          <option value="insomnio">Insomnio</option>
+          <option value="dolor-cabeza">Dolor de cabeza</option>
+          <option value="estres">Estrés</option>
+          <option value="indigestion">Indigestión</option>
+        </select>
+        <button type="submit">Ver solución</button>
+      </form>
+      <article id="solucion" style="display:none;">
+        <h3>Solución</h3>
+        <p id="texto-solucion"></p>
+      </article>
+    </section>
+  </main>
+  <footer>
+    <p>© 2024 Inventario de remedios caseros</p>
+  </footer>
+  <script>
+    const soluciones = {
+      insomnio: "Prueba una infusión de manzanilla antes de dormir y evita pantallas al menos 30 minutos antes de acostarte.",
+      "dolor-cabeza": "Descansa en un lugar tranquilo, hidrátate y coloca un paño frío en la frente.",
+      estres: "Respira profundo, haz una breve caminata y escucha música relajante.",
+      indigestion: "Toma agua tibia con limón y descansa en posición semi-incorporada."
+    };
+    document.getElementById('form-categorias').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const cat = document.getElementById('categoria').value;
+      const solucion = document.getElementById('solucion');
+      const texto = document.getElementById('texto-solucion');
+      if (soluciones[cat]) {
+        texto.textContent = soluciones[cat];
+        solucion.style.display = 'block';
+      } else {
+        solucion.style.display = 'none';
+      }
+    });
+  </script>
+</body>
+</html>
