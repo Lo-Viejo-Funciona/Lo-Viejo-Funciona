@@ -1,44 +1,44 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Sugerir Medicamento</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8"> <!-- Codificación de caracteres -->
+  <title>Sugerir Medicamento</title> <!-- Título de la página -->
+  <link rel="stylesheet" href="style.css"> <!-- Enlace a la hoja de estilos -->
 </head>
 <body>
-  <header>
-    <h1>Sugerí un medicamento</h1>
+  <header> <!-- Encabezado del sitio -->
+    <h1>Sugerí un medicamento</h1> <!-- Título principal -->
     <nav>
       <ul>
-        <li><a href="inicio.html">Inicio</a></li>
-        <li><a href="categorias.html">Categorías</a></li>
-        <li><a href="index.html">Sobre Nosotros</a></li>
+        <li><a href="inicio.html">Inicio</a></li>  <!-- Enlace a la página de inicio -->
+        <li><a href="categorias.html">Categorías</a></li> <!-- Enlace a la página de categorías -->
+        <li><a href="index.html">Sobre Nosotros</a></li> <!-- Enlace a la información -->
       </ul>
     </nav>
   </header>
   <main>
     <section>
-      <form id="form-sugerencia">
-        <label for="nombre-medicamento">Nombre del medicamento:</label>
-        <input type="text" id="nombre-medicamento" name="nombre-medicamento" required>
-        <label for="uso-medicamento">¿Para qué problema lo sugerís?</label>
-        <input type="text" id="uso-medicamento" name="uso-medicamento" required>
-        <button type="submit">Enviar sugerencia</button>
+      <form id="form-sugerencia">  <!-- Formulario para sugerir un medicamento -->
+        <label for="nombre-medicamento">Nombre del medicamento:</label> <!-- Etiqueta para el nombre del medicamento -->
+        <input type="text" id="nombre-medicamento" name="nombre-medicamento" required> <!-- Campo de texto para el nombre del medicamento -->
+        <label for="uso-medicamento">¿Para qué problema lo sugerís?</label> <!-- Etiqueta para el uso del medicamento -->
+        <input type="text" id="uso-medicamento" name="uso-medicamento" required> <!-- Campo de texto para el uso del medicamento -->
+        <button type="submit">Enviar sugerencia</button> <!-- Botón para enviar la sugerencia -->
       </form>
-      <p id="mensaje-sugerencia" style="display:none;">
+      <p id="mensaje-sugerencia" style="display:none;">  <!-- Mensaje de confirmación -->
         ¡Gracias por tu sugerencia! Será revisada.
       </p>
     </section>
   </main>
-  <footer>
-    <p>© 2025 LVF - Lo Viejo Funciona.</p>
+  <footer><!-- Pie de página con derechos de autor -->
+    <p>© 2025 LVF - Lo Viejo Funciona.</p> <!-- Derechos de autor -->
   </footer>
-  <script>
-    document.getElementById('form-sugerencia').addEventListener('submit', function(e) {
-      e.preventDefault();
-      document.getElementById('mensaje-sugerencia').style.display = 'block';
-      this.reset();
-    });
-  </script>
+  <script> /* Script para manejar el envío del formulario */
+    document.getElementById('form-sugerencia').addEventListener('submit', function(e) { /* Escucha el evento submit */
+      e.preventDefault(); /* Previene el comportamiento por defecto del formulario */
+      document.getElementById('mensaje-sugerencia').style.display = 'block'; /* Muestra el mensaje de confirmación */
+      this.reset(); /* Resetea el formulario */
+    }); /* Fin del script */
+  </script> 
 </body>
 </html>

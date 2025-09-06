@@ -1,60 +1,60 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Categorías de Problemas</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8"><!-- Codificación de caracteres -->
+  <title>Categorías de Problemas</title> <!-- Título de la página -->
+  <link rel="stylesheet" href="style.css"> <!-- Enlace a la hoja de estilos -->
 </head>
 <body>
-  <header>
-    <h1>Selecciona tu problema</h1>
+  <header> <!-- Encabezado del sitio -->  
+    <h1>Selecciona tu problema</h1> <!-- Título principal -->
     <nav>
-      <ul>
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="categorias.html">Categorías</a></li>
+      <ul> <!-- Navegación principal -->
+        <li><a href="index.html">Inicio</a></li> <!-- Enlace a la página de inicio -->
+        <li><a href="categorias.html">Categorías</a></li> <!-- Enlace a la página de categorías -->
       </ul>
     </nav>
   </header>
   <main>
-    <section>
-      <h2>¿Qué problema tienes?</h2>
-      <form id="form-categorias">
-        <label for="categoria">Elige una categoría:</label>
-        <select id="categoria" name="categoria">
-          <option value="">-- Selecciona --</option>
-          <option value="insomnio">Insomnio</option>
-          <option value="dolor-cabeza">Dolor de cabeza</option>
-          <option value="estres">Estrés</option>
-          <option value="indigestion">Indigestión</option>
+    <section> <!-- Sección de categorías -->
+      <h2>¿Qué problema tienes?</h2> 
+      <form id="form-categorias"> <!-- Formulario para seleccionar categoría -->
+        <label for="categoria">Elige una categoría:</label> <!-- Etiqueta para el selector -->
+        <select id="categoria" name="categoria"> <!-- Selector de categorías -->
+          <option value="">-- Selecciona --</option>   <!-- Opción por defecto -->
+          <option value="insomnio">Insomnio</option> <!-- Opciones de categorías -->
+          <option value="dolor-cabeza">Dolor de cabeza</option> <!-- Opciones de categorías -->
+          <option value="estres">Estrés</option> <!-- Opciones de categorías -->
+          <option value="indigestion">Indigestión</option> <!-- Opciones de categorías -->
         </select>
-        <button type="submit">Ver solución</button>
+        <button type="submit">Ver solución</button> <!-- Botón para enviar el formulario -->
       </form>
-      <article id="solucion" style="display:none;">
-        <h3>Solución</h3>
-        <p id="texto-solucion"></p>
-      </article>
+      <article id="solucion" style="display:none;"> <!-- Artículo para mostrar la solución -->
+        <h3>Solución</h3> <!-- Título de la solución -->
+        <p id="texto-solucion"></p> <!-- Párrafo donde se mostrará la solución -->
+      </article> 
     </section>
-  </main>
-  <footer>
+  </main> 
+  <footer> <!-- Pie de página con derechos de autor -->
     <p>© 2024 Inventario de remedios caseros</p>
   </footer>
-  <script>
-    const soluciones = {
+  <script> 
+    const soluciones = { /* Objeto con soluciones para cada categoría */
       insomnio: "Prueba una infusión de manzanilla antes de dormir y evita pantallas al menos 30 minutos antes de acostarte.",
       "dolor-cabeza": "Descansa en un lugar tranquilo, hidrátate y coloca un paño frío en la frente.",
       estres: "Respira profundo, haz una breve caminata y escucha música relajante.",
       indigestion: "Toma agua tibia con limón y descansa en posición semi-incorporada."
-    };
-    document.getElementById('form-categorias').addEventListener('submit', function(e) {
-      e.preventDefault();
-      const cat = document.getElementById('categoria').value;
-      const solucion = document.getElementById('solucion');
-      const texto = document.getElementById('texto-solucion');
-      if (soluciones[cat]) {
-        texto.textContent = soluciones[cat];
-        solucion.style.display = 'block';
+    }; /* Manejo del evento de envío del formulario */
+    document.getElementById('form-categorias').addEventListener('submit', function(e) { /* Escucha el evento submit */
+      e.preventDefault(); /* Previene el comportamiento por defecto del formulario */
+      const cat = document.getElementById('categoria').value;/* Obtiene la categoría seleccionada */
+      const solucion = document.getElementById('solucion');/* Elemento donde se mostrará la solución */
+      const texto = document.getElementById('texto-solucion');/* Elemento del texto de la solución */
+      if (soluciones[cat]) { /* Si existe una solución para la categoría */
+        texto.textContent = soluciones[cat];/* Actualiza el texto de la solución */
+        solucion.style.display = 'block';/* Muestra el artículo de solución */
       } else {
-        solucion.style.display = 'none';
+        solucion.style.display = 'none';/* Oculta el artículo si no hay solución */
       }
     });
   </script>
