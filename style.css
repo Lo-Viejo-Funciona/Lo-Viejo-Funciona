@@ -1,45 +1,45 @@
 :root {
-  --fondo: #e4cfa1;
-  --papel: #f8e7c0;
-  --texto: #3a2e1a;
-  --marron: #5b4224;
-  --marron-claro: #7d5c35;
-  --resaltado: #d6b478;
-  --fuente: 'Georgia', serif;
+  --fondo: #ffeec4;/*Este es el colol del fondo de la pagina.*/
+  --papel: #ffeec4;/*Este es el color del fondo de los items.*/
+  --texto: #2a2213;/*Este es el color que tiene la fuente.*/
+  --marron: #744711dd;/*Este es el color de los botones y subtitulos.*/
+  --marron-claro: #b9731ddd;/*Este es el color de los textos Inicio, Categorías y Sobre Nosotros que está bajo el logo.*/
+  --resaltado: #eac587;/*Este es el color de los textos que poseen un enlace.*/
+  --fuente: 'Georgia', serif; /*Estas son las fuentes que utiliza nuestro proyecto.*/
 }
 
-* {
+* {/*estos son los bordes de la pagina web*/
   margin: 0;
-  padding: 0;
+  padding: 0;/*0*/
   box-sizing: border-box;
 }
 
 body {
-  font-family: var(--fuente);
-  background-color: var(--fondo);
-  color: var(--texto);
-  line-height: 1.6;
+  font-family: var(--fuente);/*Se le establece una fuente*/
+  background-color: var(--fondo);/*Se le establece color al fondo*/
+  color: var(--texto);/*Se le da color al texto*/
+  line-height: 1.6;/*La separación ente los elementos en la pajina web*/
   padding: 1rem;
-  background-image: url('textura-papel.jpg'); /* opcional */
+  /*background-image: url('textura-papel.jpg');  opcional */
   background-size: cover;
   background-blend-mode: multiply;
 }
 
-header {
-  background-color: var(--papel);
-  border-bottom: 2px dashed var(--marron);
+header {/*Sección de la cabecera*/
+  background-color: var(--papel);/**/
+  border-bottom: 2px dashed var(--marron);/*Color de los bordes*/
   padding: 1rem 2rem;
-  text-align: center;
-  box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+  text-align: center;/*Esta es la alineación del texto, la cual está en el centro*/
+  box-shadow: 0 3px 8px rgba(134, 3, 210, 0.15);/*Esta es la sombra del botón*/
 }
 
-header h1 {
-  font-size: 2.7rem;
-  color: var(--marron);
-  letter-spacing: 1px;
+header h1 {/*sección de Encabezado*/
+  font-size: 2.7rem;/*Tamaño de la fuente*/
+  color: var(--marron);/*Color de la fuente */
+  letter-spacing: 1px;/*Espacio entre caracteres*/
 }
 
-nav ul {
+nav ul { 
   list-style: none;
   display: flex;
   justify-content: center;
@@ -48,98 +48,98 @@ nav ul {
 }
 
 nav a {
-  text-decoration: none;
-  color: var(--marron-claro);
+  text-decoration: none;/*Decorado del texto*/
+  color: var(--marron-claro);/*Color*/
   font-weight: bold;
 }
 
 nav a:hover {
-  color: var(--resaltado);
-  text-decoration: underline;
+  color: var(--resaltado);/*Color resaltado*/
+  text-decoration: underline;/*Decoración del texto*/
 }
 
-main {
-  padding: 2rem;
-  max-width: 800px;
-  margin: 0 auto;
+main {/*Principal*/
+  padding: 2rem;/*relleno*/
+  max-width: 800px;/*Altura maxima*/
+  margin: 0 auto;/*Margen */
 }
 
-section h2 {
-  font-size: 1.8rem;
-  margin-bottom: 1rem;
-  color: var(--marron);
-  text-align: center;
+section h2 {/*segundo encabezado*/
+  font-size: 1.8rem;/*Tamaño de la fuente*/
+  margin-bottom: 1rem;/*Margen del espacio que ocupa*/
+  color: var(--marron);/*Color del texto*/
+  text-align: center;/*alineación del texto*/
 }
 
-form {
+form {/*Lugar donde están los problemas*/
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 3rem;
-  gap: 1rem;
+  flex-direction: column;/*Dircción a la que salen los items*/
+  align-items: center;/*Alineación de los items*/
+  margin-bottom: 3rem;/*margen entre la parte mas baja*/
+  gap: 1rem;/*Grosor*/
 }
 
-select {
+select {/*problema seleccionado*/
   padding: 0.6rem;
-  border: 2px solid var(--marron);
-  font-size: 1rem;
-  background-color: var(--papel);
-  color: var(--texto);
+  border: 2px solid var(--marron);/*color de los bordes*/
+  font-size: 1rem;/*tamaño de la fuente*/
+  background-color: var(--papel);/*Color de fondo*/
+  color: var(--texto);/*Color de la fuente*/
 }
 
-button {
+button {/*Sección del botón*/
   padding: 0.5rem 1.2rem;
-  background-color: var(--marron);
-  color: white;
-  border: none;
-  font-weight: bold;
-  cursor: pointer;
-  border-radius: 3px;
+  background-color: var(--marron);/*Color de fondo*/
+  color: white;/*color del texto*/
+  border: none;/*borde*/
+  font-weight: bold;/*Peso de la fuente (Negrita)*/
+  cursor: pointer;/*cambio de color cuando el mouse se acerca*/
+  border-radius: 3px;/*radio del vorde*/
 }
 
-button:hover {
-  background-color: var(--marron-claro);
+button:hover {/*Boton*/
+  background-color: var(--marron-claro);/*Color del boton*/
 }
 
-article {
-  background-color: var(--papel);
-  border: 1px solid #b48d5a;
+article {/*Articulos con dolores comúnes*/
+  background-color: var(--papel);/*Color de fondo*/
+  border: 1px solid #b48d5a;/*Color de bordes*/
   padding: 1rem;
   margin-bottom: 1.5rem;
-  border-radius: 6px;
-  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.08);
+  border-radius: 6px;/*Radio de los bordes*/
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.08);/*Sombreado*/
 }
 
-article h3 {
-  color: var(--marron);
-  margin-bottom: 0.4rem;
+article h3 {/*Encabezado 3*/
+  color: var(--marron);/*Color del encabezado*/
+  margin-bottom: 0.4rem;/*Margen */
 }
 
-footer {
-  background-color: var(--papel);
-  text-align: center;
+footer {/*Pie de pajina*/
+  background-color: var(--papel);/*Color del fondo*/
+  text-align: center;/*Alineacion del texto*/
   padding: 1rem;
-  font-size: 0.9rem;
+  font-size: 0.9rem;/*Tamaño de la fuente*/
   border-top: 1px dashed var(--marron);
-  margin-top: 2rem;
+  margin-top: 2rem;/*Margen de arriba*/
 }
 
-img {
-  max-width: 8%;
-  height: auto;
+img {/*Sección de la imagen*/
+  max-width: 8%;/*Altura*/
+  height: auto;/*Peso*/
 }
 
 
-.fuente-remedios {
-  font-size: 0.95rem;
-  color: var(--marron-claro);
+.fuente-remedios {/*Esta es la fuente del texto de los remedios*/
+  font-size: 0.95rem;   /*Este se el tamaño del texto*/
+  color: var(--marron-claro);/*Color del texto*/
 }
 
-.nav-inicio {
-  text-align: center;
-  margin-top: 2rem;
+.nav-inicio {/*Barra de navegación*/
+  text-align: center;/*alineacion*/
+  margin-top: 2rem;/*margen*/
 }
-a{
+a{/**/
   text-decoration: none;
-  color: var(--white);
+  color: var(--white);/*Color del texto*/
 }
