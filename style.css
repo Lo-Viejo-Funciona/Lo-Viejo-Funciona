@@ -46,7 +46,9 @@ nav ul {
   gap: 2rem;
   margin-top: 0.5rem;
 }
-
+li{
+  list-style: none;/*Quita los puntos de las listas*/
+}
 nav a {
   text-decoration: none;/*Decorado del texto*/
   color: var(--marron-claro);/*Color*/
