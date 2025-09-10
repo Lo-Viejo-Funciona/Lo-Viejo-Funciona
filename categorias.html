@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8"><!-- Codificación de caracteres -->
   <title>LVF - Categorías</title> <!-- Título de la página -->
-  <link rel="stylesheet" href="/style.css"> <!-- Enlace a la hoja de estilos -->
+  <link rel="stylesheet" href="style.css"> <!-- Enlace a la hoja de estilos -->
 </head>
 <body>
   <header> <!-- Encabezado del sitio -->  
-     <img src="/assets/logolvf.png" alt="Logo LVF"> <!-- Logo del sitio -->
+     <img src="./logolvf.png" alt="Logo LVF"> <!-- Logo del sitio -->
     <nav>
       <ul> <!-- Navegación principal -->
         <li><a href="./index.html">Inicio</a></li> <!-- Enlace a la página de inicio -->
@@ -27,13 +27,12 @@
           <option value="insomnio">Insomnio</option> <!-- Opciones de categorías -->
           <option value="dolor-cabeza">Dolor de cabeza</option> <!-- Opciones de categorías -->
           <option value="estres">Estrés</option> <!-- Opciones de categorías -->
-          <option value="resfrio">Resfrío</option> <!-- Opciones de categorías -->
+          <option value="indigestion">Indigestión</option> <!-- Opciones de categorías -->
         </select>
         <button type="submit">Ver solución</button> <!-- Botón para enviar el formulario -->
       </form>
       <article id="solucion" style="display:none;"> <!-- Artículo para mostrar la solución -->
         <h3>Solución</h3> <!-- Título de la solución -->
-        <img id="img-solucion" src="" alt="Planta utilizada" style="max-width:200px; display:none;"> <!-- Imagen de la planta -->
         <p id="texto-solucion"></p> <!-- Párrafo donde se mostrará la solución -->
       </article> 
     </section>
@@ -43,35 +42,21 @@
   </footer>
   <script> 
     const soluciones = { /* Objeto con soluciones para cada categoría */
-      insomnio: "Utilizar lavanda, pasiflora y mburucuyá, ya sea en infusiones o como aromaterapia.",
-      "dolor-cabeza": "Preparar una infusión de menta, dejarla enfriar y colocarla en la frente con un paño frío. Este remedio también ayuda a bajar la fiebre.",
-      estres: "Respira profundo, haz una breve caminata y escucha música relajante, además puedes utilizar lavanda, pasiflora y mburucuyá, ya sea en infusiones o como aromaterapia.",
-      resfrio: "Eucaliptus y tomillo, preparados en infusiones, jarabes o tinturas madres. También recomienda la aromaterapia para aliviar síntomas."
-    };
-    const imagenes = {
-      insomnio: "", 
-      "dolor-cabeza": "/assets/infusion_menta.png", 
-      estres: "lavanda.jpg", 
-      resfrio: "eucaliptus.jpg" 
-    };
-    document.getElementById('form-categorias').addEventListener('submit', function(e) {
-      e.preventDefault();
-      const cat = document.getElementById('categoria').value;
-      const solucion = document.getElementById('solucion');
-      const texto = document.getElementById('texto-solucion');
-      const img = document.getElementById('img-solucion');
-      if (soluciones[cat]) {
-        texto.textContent = soluciones[cat];
-        solucion.style.display = 'block';
-        if (imagenes[cat]) {
-          img.src = imagenes[cat];
-          img.style.display = 'block';
-        } else {
-          img.style.display = 'none';
-        }
+      insomnio: "Prueba una infusión de manzanilla antes de dormir y evita pantallas al menos 30 minutos antes de acostarte.",
+      "dolor-cabeza": "Descansa en un lugar tranquilo, hidrátate y coloca un paño frío en la frente.",
+      estres: "Respira profundo, haz una breve caminata y escucha música relajante.",
+      indigestion: "Toma agua tibia con limón y descansa en posición semi-incorporada."
+    }; /* Manejo del evento de envío del formulario */
+    document.getElementById('form-categorias').addEventListener('submit', function(e) { /* Escucha el evento submit */
+      e.preventDefault(); /* Previene el comportamiento por defecto del formulario */
+      const cat = document.getElementById('categoria').value;/* Obtiene la categoría seleccionada */
+      const solucion = document.getElementById('solucion');/* Elemento donde se mostrará la solución */
+      const texto = document.getElementById('texto-solucion');/* Elemento del texto de la solución */
+      if (soluciones[cat]) { /* Si existe una solución para la categoría */
+        texto.textContent = soluciones[cat];/* Actualiza el texto de la solución */
+        solucion.style.display = 'block';/* Muestra el artículo de solución */
       } else {
-        solucion.style.display = 'none';
-        img.style.display = 'none';
+        solucion.style.display = 'none';/* Oculta el artículo si no hay solución */
       }
     });
   </script>
